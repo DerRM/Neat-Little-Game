@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F26A8791515148D00FB49BC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F26A8781515148D00FB49BC /* Cocoa.framework */; };
+		5F26A8831515148D00FB49BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F26A8811515148D00FB49BC /* InfoPlist.strings */; };
+		5F26A8851515148D00FB49BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F26A8841515148D00FB49BC /* main.m */; };
+		5F26A8891515148D00FB49BC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5F26A8871515148D00FB49BC /* Credits.rtf */; };
+		5F26A88C1515148D00FB49BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F26A88B1515148D00FB49BC /* AppDelegate.m */; };
+		5F26A88F1515148E00FB49BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F26A88D1515148E00FB49BC /* MainMenu.xib */; };
+		5F26A8971515148E00FB49BC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F26A8961515148E00FB49BC /* SenTestingKit.framework */; };
+		5F26A8981515148E00FB49BC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F26A8781515148D00FB49BC /* Cocoa.framework */; };
+		5F26A8A01515148E00FB49BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F26A89E1515148E00FB49BC /* InfoPlist.strings */; };
+		5F26A8A31515148E00FB49BC /* Neat_Little_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F26A8A21515148E00FB49BC /* Neat_Little_GameTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F26A8991515148E00FB49BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F26A86B1515148D00FB49BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F26A8731515148D00FB49BC;
+			remoteInfo = "Neat Little Game";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F26A8741515148D00FB49BC /* Neat Little Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Neat Little Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F26A8781515148D00FB49BC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5F26A87B1515148D00FB49BC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5F26A87C1515148D00FB49BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5F26A87D1515148D00FB49BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5F26A8801515148D00FB49BC /* Neat Little Game-Info.plist */ = {isa = PBXFileReference; path = "Neat Little Game-Info.plist"; sourceTree = "<group>"; };
+		5F26A8821515148D00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5F26A8841515148D00FB49BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F26A8861515148D00FB49BC /* Neat Little Game-Prefix.pch */ = {isa = PBXFileReference; path = "Neat Little Game-Prefix.pch"; sourceTree = "<group>"; };
+		5F26A8881515148D00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5F26A88A1515148D00FB49BC /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		5F26A88B1515148D00FB49BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5F26A88E1515148E00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5F26A8951515148E00FB49BC /* Neat Little GameTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Neat Little GameTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F26A8961515148E00FB49BC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5F26A89D1515148E00FB49BC /* Neat Little GameTests-Info.plist */ = {isa = PBXFileReference; path = "Neat Little GameTests-Info.plist"; sourceTree = "<group>"; };
+		5F26A89F1515148E00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5F26A8A11515148E00FB49BC /* Neat_Little_GameTests.h */ = {isa = PBXFileReference; path = Neat_Little_GameTests.h; sourceTree = "<group>"; };
+		5F26A8A21515148E00FB49BC /* Neat_Little_GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Neat_Little_GameTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F26A8711515148D00FB49BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F26A8791515148D00FB49BC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F26A8911515148E00FB49BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F26A8971515148E00FB49BC /* SenTestingKit.framework in Frameworks */,
+				5F26A8981515148E00FB49BC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F26A8691515148D00FB49BC = {
+			isa = PBXGroup;
+			children = (
+				5F26A87E1515148D00FB49BC /* Neat Little Game */,
+				5F26A89B1515148E00FB49BC /* Neat Little GameTests */,
+				5F26A8771515148D00FB49BC /* Frameworks */,
+				5F26A8751515148D00FB49BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F26A8751515148D00FB49BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F26A8741515148D00FB49BC /* Neat Little Game.app */,
+				5F26A8951515148E00FB49BC /* Neat Little GameTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F26A8771515148D00FB49BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F26A8781515148D00FB49BC /* Cocoa.framework */,
+				5F26A8961515148E00FB49BC /* SenTestingKit.framework */,
+				5F26A87A1515148D00FB49BC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F26A87A1515148D00FB49BC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F26A87B1515148D00FB49BC /* AppKit.framework */,
+				5F26A87C1515148D00FB49BC /* CoreData.framework */,
+				5F26A87D1515148D00FB49BC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5F26A87E1515148D00FB49BC /* Neat Little Game */ = {
+			isa = PBXGroup;
+			children = (
+				5F26A88A1515148D00FB49BC /* AppDelegate.h */,
+				5F26A88B1515148D00FB49BC /* AppDelegate.m */,
+				5F26A88D1515148E00FB49BC /* MainMenu.xib */,
+				5F26A87F1515148D00FB49BC /* Supporting Files */,
+			);
+			path = "Neat Little Game";
+			sourceTree = "<group>";
+		};
+		5F26A87F1515148D00FB49BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F26A8801515148D00FB49BC /* Neat Little Game-Info.plist */,
+				5F26A8811515148D00FB49BC /* InfoPlist.strings */,
+				5F26A8841515148D00FB49BC /* main.m */,
+				5F26A8861515148D00FB49BC /* Neat Little Game-Prefix.pch */,
+				5F26A8871515148D00FB49BC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F26A89B1515148E00FB49BC /* Neat Little GameTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F26A8A11515148E00FB49BC /* Neat_Little_GameTests.h */,
+				5F26A8A21515148E00FB49BC /* Neat_Little_GameTests.m */,
+				5F26A89C1515148E00FB49BC /* Supporting Files */,
+			);
+			path = "Neat Little GameTests";
+			sourceTree = "<group>";
+		};
+		5F26A89C1515148E00FB49BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F26A89D1515148E00FB49BC /* Neat Little GameTests-Info.plist */,
+				5F26A89E1515148E00FB49BC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F26A8731515148D00FB49BC /* Neat Little Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F26A8A61515148E00FB49BC /* Build configuration list for PBXNativeTarget "Neat Little Game" */;
+			buildPhases = (
+				5F26A8701515148D00FB49BC /* Sources */,
+				5F26A8711515148D00FB49BC /* Frameworks */,
+				5F26A8721515148D00FB49BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Neat Little Game";
+			productName = "Neat Little Game";
+			productReference = 5F26A8741515148D00FB49BC /* Neat Little Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F26A8941515148E00FB49BC /* Neat Little GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F26A8A91515148E00FB49BC /* Build configuration list for PBXNativeTarget "Neat Little GameTests" */;
+			buildPhases = (
+				5F26A8901515148E00FB49BC /* Sources */,
+				5F26A8911515148E00FB49BC /* Frameworks */,
+				5F26A8921515148E00FB49BC /* Resources */,
+				5F26A8931515148E00FB49BC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F26A89A1515148E00FB49BC /* PBXTargetDependency */,
+			);
+			name = "Neat Little GameTests";
+			productName = "Neat Little GameTests";
+			productReference = 5F26A8951515148E00FB49BC /* Neat Little GameTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F26A86B1515148D00FB49BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Smart Mobile Factory";
+			};
+			buildConfigurationList = 5F26A86E1515148D00FB49BC /* Build configuration list for PBXProject "Neat Little Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5F26A8691515148D00FB49BC;
+			productRefGroup = 5F26A8751515148D00FB49BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F26A8731515148D00FB49BC /* Neat Little Game */,
+				5F26A8941515148E00FB49BC /* Neat Little GameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F26A8721515148D00FB49BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F26A8831515148D00FB49BC /* InfoPlist.strings in Resources */,
+				5F26A8891515148D00FB49BC /* Credits.rtf in Resources */,
+				5F26A88F1515148E00FB49BC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F26A8921515148E00FB49BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F26A8A01515148E00FB49BC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F26A8931515148E00FB49BC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F26A8701515148D00FB49BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F26A8851515148D00FB49BC /* main.m in Sources */,
+				5F26A88C1515148D00FB49BC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F26A8901515148E00FB49BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F26A8A31515148E00FB49BC /* Neat_Little_GameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F26A89A1515148E00FB49BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F26A8731515148D00FB49BC /* Neat Little Game */;
+			targetProxy = 5F26A8991515148E00FB49BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F26A8811515148D00FB49BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F26A8821515148D00FB49BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5F26A8871515148D00FB49BC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F26A8881515148D00FB49BC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5F26A88D1515148E00FB49BC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F26A88E1515148E00FB49BC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		5F26A89E1515148E00FB49BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F26A89F1515148E00FB49BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F26A8A41515148E00FB49BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5F26A8A51515148E00FB49BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5F26A8A71515148E00FB49BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neat Little Game/Neat Little Game-Prefix.pch";
+				INFOPLIST_FILE = "Neat Little Game/Neat Little Game-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5F26A8A81515148E00FB49BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neat Little Game/Neat Little Game-Prefix.pch";
+				INFOPLIST_FILE = "Neat Little Game/Neat Little Game-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5F26A8AA1515148E00FB49BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Neat Little Game.app/Contents/MacOS/Neat Little Game";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neat Little Game/Neat Little Game-Prefix.pch";
+				INFOPLIST_FILE = "Neat Little GameTests/Neat Little GameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5F26A8AB1515148E00FB49BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Neat Little Game.app/Contents/MacOS/Neat Little Game";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neat Little Game/Neat Little Game-Prefix.pch";
+				INFOPLIST_FILE = "Neat Little GameTests/Neat Little GameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F26A86E1515148D00FB49BC /* Build configuration list for PBXProject "Neat Little Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F26A8A41515148E00FB49BC /* Debug */,
+				5F26A8A51515148E00FB49BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F26A8A61515148E00FB49BC /* Build configuration list for PBXNativeTarget "Neat Little Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F26A8A71515148E00FB49BC /* Debug */,
+				5F26A8A81515148E00FB49BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5F26A8A91515148E00FB49BC /* Build configuration list for PBXNativeTarget "Neat Little GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F26A8AA1515148E00FB49BC /* Debug */,
+				5F26A8AB1515148E00FB49BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F26A86B1515148D00FB49BC /* Project object */;
+}
