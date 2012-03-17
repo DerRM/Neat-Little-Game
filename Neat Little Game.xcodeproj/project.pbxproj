@@ -35,19 +35,19 @@
 		5F26A87B1515148D00FB49BC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5F26A87C1515148D00FB49BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5F26A87D1515148D00FB49BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5F26A8801515148D00FB49BC /* Neat Little Game-Info.plist */ = {isa = PBXFileReference; path = "Neat Little Game-Info.plist"; sourceTree = "<group>"; };
+		5F26A8801515148D00FB49BC /* Neat Little Game-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Neat Little Game-Info.plist"; sourceTree = "<group>"; };
 		5F26A8821515148D00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F26A8841515148D00FB49BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5F26A8861515148D00FB49BC /* Neat Little Game-Prefix.pch */ = {isa = PBXFileReference; path = "Neat Little Game-Prefix.pch"; sourceTree = "<group>"; };
+		5F26A8861515148D00FB49BC /* Neat Little Game-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neat Little Game-Prefix.pch"; sourceTree = "<group>"; };
 		5F26A8881515148D00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		5F26A88A1515148D00FB49BC /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		5F26A88A1515148D00FB49BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F26A88B1515148D00FB49BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5F26A88E1515148E00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5F26A8951515148E00FB49BC /* Neat Little GameTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Neat Little GameTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F26A8961515148E00FB49BC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5F26A89D1515148E00FB49BC /* Neat Little GameTests-Info.plist */ = {isa = PBXFileReference; path = "Neat Little GameTests-Info.plist"; sourceTree = "<group>"; };
+		5F26A89D1515148E00FB49BC /* Neat Little GameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Neat Little GameTests-Info.plist"; sourceTree = "<group>"; };
 		5F26A89F1515148E00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5F26A8A11515148E00FB49BC /* Neat_Little_GameTests.h */ = {isa = PBXFileReference; path = Neat_Little_GameTests.h; sourceTree = "<group>"; };
+		5F26A8A11515148E00FB49BC /* Neat_Little_GameTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Neat_Little_GameTests.h; sourceTree = "<group>"; };
 		5F26A8A21515148E00FB49BC /* Neat_Little_GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Neat_Little_GameTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
