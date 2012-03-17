@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Test : NSObject
+@interface Person : NSObject
+{
+    float heightInMeters;
+    int weightInKilos;
+}
+
+@property float heightInMeters;
+@property int weightInKilos;
+
+- (float)bodyMassIndex;
 
 @end

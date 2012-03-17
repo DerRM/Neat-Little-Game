@@ -6,8 +6,16 @@
 //  Copyright (c) 2012 Smart Mobile Factory. All rights reserved.
 //
 
-#import "Test.h"
+#import "Person.h"
 
-@implementation Test
+@implementation Person
+
+@synthesize heightInMeters, weightInKilos;
+
+- (float)bodyMassIndex
+{
+    float h = [self heightInMeters];
+    return [self weightInKilos] / (h * h);
+}
 
 @end
