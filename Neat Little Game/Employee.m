@@ -6,8 +6,10 @@
 //  Copyright (c) 2012 DerRM Productions. All rights reserved.
 //
 
-#import "Test.h"
+#import "Employee.h"
 
-@implementation Test
+@implementation Employee
+
+@synthesize employeeID;
 
 @end

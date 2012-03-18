@@ -6,8 +6,13 @@
 //  Copyright (c) 2012 DerRM Productions. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Person.h"
 
-@interface Test : NSObject
+@interface Employee : Person
+{
+    int employeeID;
+}
+
+@property int employeeID;
 
 @end
