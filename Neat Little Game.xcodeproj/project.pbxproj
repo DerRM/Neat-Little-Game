@@ -19,6 +19,7 @@
 		5F26A8C7151532F400FB49BC /* StockHolding.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F26A8C6151532F400FB49BC /* StockHolding.mm */; };
 		5F48E9D4155078DD0055EE55 /* SCFReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F48E9D3155078DD0055EE55 /* SCFReader.cpp */; };
 		5FBA647F156847FD00E9A4A7 /* Test.scf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F48E9D7155081720055EE55 /* Test.scf */; };
+		5FBA648415684AC000E9A4A7 /* SCFHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FBA648315684AC000E9A4A7 /* SCFHeader.cpp */; };
 		8F2556B415162B12009FF91C /* Employee.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8F2556B315162B12009FF91C /* Employee.mm */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		5F48E9D3155078DD0055EE55 /* SCFReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SCFReader.cpp; sourceTree = "<group>"; };
 		5F48E9D6155080E80055EE55 /* SCFReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFReader.h; sourceTree = "<group>"; };
 		5F48E9D7155081720055EE55 /* Test.scf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Test.scf; sourceTree = "<group>"; };
+		5FBA648015684A6100E9A4A7 /* SCFHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCFHeader.h; sourceTree = "<group>"; };
+		5FBA648315684AC000E9A4A7 /* SCFHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SCFHeader.cpp; sourceTree = "<group>"; };
 		8F2556B215162B12009FF91C /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		8F2556B315162B12009FF91C /* Employee.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Employee.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,15 +140,8 @@
 		5F26A87E1515148D00FB49BC /* Neat Little Game */ = {
 			isa = PBXGroup;
 			children = (
-				8F2556B215162B12009FF91C /* Employee.h */,
-				8F2556B315162B12009FF91C /* Employee.mm */,
-				5F26A8841515148D00FB49BC /* main.mm */,
-				5F26A8BD1515190A00FB49BC /* Person.h */,
-				5F26A8BE1515190A00FB49BC /* Person.mm */,
-				5F48E9D3155078DD0055EE55 /* SCFReader.cpp */,
-				5F48E9D6155080E80055EE55 /* SCFReader.h */,
-				5F26A8C5151532F400FB49BC /* StockHolding.h */,
-				5F26A8C6151532F400FB49BC /* StockHolding.mm */,
+				5FBA648215684A6E00E9A4A7 /* Header */,
+				5FBA648115684A6A00E9A4A7 /* Source */,
 				5F26A87F1515148D00FB49BC /* Supporting Files */,
 			);
 			path = "Neat Little Game";
@@ -179,6 +175,31 @@
 				5F26A89E1515148E00FB49BC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FBA648115684A6A00E9A4A7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5F26A8BE1515190A00FB49BC /* Person.mm */,
+				5F26A8841515148D00FB49BC /* main.mm */,
+				5F26A8C6151532F400FB49BC /* StockHolding.mm */,
+				8F2556B315162B12009FF91C /* Employee.mm */,
+				5FBA648315684AC000E9A4A7 /* SCFHeader.cpp */,
+				5F48E9D3155078DD0055EE55 /* SCFReader.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		5FBA648215684A6E00E9A4A7 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				5F26A8C5151532F400FB49BC /* StockHolding.h */,
+				5FBA648015684A6100E9A4A7 /* SCFHeader.h */,
+				5F48E9D6155080E80055EE55 /* SCFReader.h */,
+				5F26A8BD1515190A00FB49BC /* Person.h */,
+				8F2556B215162B12009FF91C /* Employee.h */,
+			);
+			name = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +315,7 @@
 				5F26A8C7151532F400FB49BC /* StockHolding.mm in Sources */,
 				8F2556B415162B12009FF91C /* Employee.mm in Sources */,
 				5F48E9D4155078DD0055EE55 /* SCFReader.cpp in Sources */,
+				5FBA648415684AC000E9A4A7 /* SCFHeader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
