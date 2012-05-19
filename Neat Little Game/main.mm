@@ -8,19 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "Employee.h"
+#include "SCFReader.h"
 
 int main(int argc, char *argv[])
 {
-    @autoreleasepool {
-        
-        Employee *person = [[Employee alloc] init];
-        
-        [person setWeightInKilos:96];
-        [person setHeightInMeters:1.8];
-        [person setEmployeeID:15];
-        
-        
-    }
+    SCFReader reader;
+    reader.test();
     
     return 0;
 }
