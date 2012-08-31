@@ -11,16 +11,29 @@
 
 class SCFHeader
 {
+public:
     class SCFMainChunk
     {
-        public:
-            SCFMainChunk();
-            ~SCFMainChunk();
+    public:
+        SCFMainChunk(){};
+        ~SCFMainChunk(){};
         
-            int magicNumber;
-            int version;
-            int chunkId;
-            int noSubChunks;
+        int magicNumber;
+        int version;
+        int chunkId;
+        int noSubChunks;
+    };
+    
+    class SCFGeometryHeader
+    {
+    public:
+        SCFGeometryHeader(){};
+        ~SCFGeometryHeader(){};
+            
+        int chunkId;
+        int noOfTriangleGroups;
+        int noOfTriangles;
+        int dataOffset;
     };
 };
 

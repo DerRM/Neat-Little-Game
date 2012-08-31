@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <fstream>
+#include "SCFHeader.h"
 
 using namespace std;
 
@@ -18,20 +19,14 @@ class SCFReader
 {
     public:
     
-        struct Header
-        {
-            int magicNumber;
-            int version;
-            int chunkId;
-            int noOfSubChunks;
-            
-        } header;
+    SCFHeader::SCFGeometryHeader geometryHeader;
+    SCFHeader::SCFMainChunk mainHeader;
     
         SCFReader();
-        SCFReader(char* fileName);
+        SCFReader(const char* fileName);
         int test();
     private:
-        void read();
+        void read(const char* fileName);
         char* fileName;
 };
 

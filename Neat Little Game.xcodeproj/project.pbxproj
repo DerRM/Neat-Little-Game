@@ -18,6 +18,19 @@
 		5F26A8C0151530BC00FB49BC /* Person.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F26A8BE1515190A00FB49BC /* Person.mm */; };
 		5F26A8C7151532F400FB49BC /* StockHolding.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F26A8C6151532F400FB49BC /* StockHolding.mm */; };
 		5F48E9D4155078DD0055EE55 /* SCFReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F48E9D3155078DD0055EE55 /* SCFReader.cpp */; };
+		5F6B2ADB15EEB4F4007D3AA5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6B2ADA15EEB4F4007D3AA5 /* OpenGL.framework */; };
+		5F77E0F415F12EBF00CAC467 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F77E0F315F12EBF00CAC467 /* CoreVideo.framework */; };
+		5F81ED1015F1142500D4D783 /* Vector3.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED0615F1142500D4D783 /* Vector3.mm */; };
+		5F81ED1115F1142500D4D783 /* Matrix3.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED0815F1142500D4D783 /* Matrix3.mm */; };
+		5F81ED1215F1142500D4D783 /* Matrix4.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED0A15F1142500D4D783 /* Matrix4.mm */; };
+		5F81ED1315F1142500D4D783 /* Vector4.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED0D15F1142500D4D783 /* Vector4.mm */; };
+		5F81ED1715F11E8F00D4D783 /* Matrix4.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED0A15F1142500D4D783 /* Matrix4.mm */; };
+		5F81ED1815F11E9200D4D783 /* Vector3.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED0615F1142500D4D783 /* Vector3.mm */; };
+		5F81ED1915F11E9700D4D783 /* Matrix3.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED0815F1142500D4D783 /* Matrix3.mm */; };
+		5F81ED1A15F11E9E00D4D783 /* Vector4.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED0D15F1142500D4D783 /* Vector4.mm */; };
+		5F81ED1D15F11EE200D4D783 /* Vertex3.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED1C15F11EE200D4D783 /* Vertex3.mm */; };
+		5F8ACBBA15EBF67F00C1BA80 /* MyOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F8ACBB915EBF67F00C1BA80 /* MyOpenGLView.mm */; };
+		5F8ACBBD15EBF81700C1BA80 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F8ACBBC15EBF81700C1BA80 /* MainMenu.xib */; };
 		5FBA647F156847FD00E9A4A7 /* Test.scf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F48E9D7155081720055EE55 /* Test.scf */; };
 		5FBA648415684AC000E9A4A7 /* SCFHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FBA648315684AC000E9A4A7 /* SCFHeader.cpp */; };
 		8F2556B415162B12009FF91C /* Employee.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8F2556B315162B12009FF91C /* Employee.mm */; };
@@ -70,6 +83,22 @@
 		5F48E9D3155078DD0055EE55 /* SCFReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SCFReader.cpp; sourceTree = "<group>"; };
 		5F48E9D6155080E80055EE55 /* SCFReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFReader.h; sourceTree = "<group>"; };
 		5F48E9D7155081720055EE55 /* Test.scf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Test.scf; sourceTree = "<group>"; };
+		5F6B2ADA15EEB4F4007D3AA5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		5F77E0F315F12EBF00CAC467 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		5F81ED0515F1142500D4D783 /* Vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
+		5F81ED0615F1142500D4D783 /* Vector3.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Vector3.mm; sourceTree = "<group>"; };
+		5F81ED0715F1142500D4D783 /* Matrix3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix3.h; sourceTree = "<group>"; };
+		5F81ED0815F1142500D4D783 /* Matrix3.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Matrix3.mm; sourceTree = "<group>"; };
+		5F81ED0915F1142500D4D783 /* Matrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix4.h; sourceTree = "<group>"; };
+		5F81ED0A15F1142500D4D783 /* Matrix4.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Matrix4.mm; sourceTree = "<group>"; };
+		5F81ED0B15F1142500D4D783 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		5F81ED0C15F1142500D4D783 /* Vector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector4.h; sourceTree = "<group>"; };
+		5F81ED0D15F1142500D4D783 /* Vector4.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Vector4.mm; sourceTree = "<group>"; };
+		5F81ED0E15F1142500D4D783 /* Vertex3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex3.h; sourceTree = "<group>"; };
+		5F81ED1C15F11EE200D4D783 /* Vertex3.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Vertex3.mm; sourceTree = "<group>"; };
+		5F8ACBB815EBF67F00C1BA80 /* MyOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenGLView.h; sourceTree = "<group>"; };
+		5F8ACBB915EBF67F00C1BA80 /* MyOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyOpenGLView.mm; sourceTree = "<group>"; };
+		5F8ACBBC15EBF81700C1BA80 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		5FBA648015684A6100E9A4A7 /* SCFHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCFHeader.h; sourceTree = "<group>"; };
 		5FBA648315684AC000E9A4A7 /* SCFHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SCFHeader.cpp; sourceTree = "<group>"; };
 		8F2556B215162B12009FF91C /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
@@ -81,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F77E0F415F12EBF00CAC467 /* CoreVideo.framework in Frameworks */,
+				5F6B2ADB15EEB4F4007D3AA5 /* OpenGL.framework in Frameworks */,
 				5F26A8791515148D00FB49BC /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +131,8 @@
 		5F26A8691515148D00FB49BC = {
 			isa = PBXGroup;
 			children = (
+				5F77E0F315F12EBF00CAC467 /* CoreVideo.framework */,
+				5F8ACBBC15EBF81700C1BA80 /* MainMenu.xib */,
 				5F48E9D7155081720055EE55 /* Test.scf */,
 				5F26A87E1515148D00FB49BC /* Neat Little Game */,
 				5F26A89B1515148E00FB49BC /* Neat Little GameTests */,
@@ -120,6 +153,7 @@
 		5F26A8771515148D00FB49BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F6B2ADA15EEB4F4007D3AA5 /* OpenGL.framework */,
 				5F26A8781515148D00FB49BC /* Cocoa.framework */,
 				5F26A8961515148E00FB49BC /* SenTestingKit.framework */,
 				5F26A87A1515148D00FB49BC /* Other Frameworks */,
@@ -140,6 +174,7 @@
 		5F26A87E1515148D00FB49BC /* Neat Little Game */ = {
 			isa = PBXGroup;
 			children = (
+				5F81ED1615F1142D00D4D783 /* Math */,
 				5FBA648215684A6E00E9A4A7 /* Header */,
 				5FBA648115684A6A00E9A4A7 /* Source */,
 				5F26A87F1515148D00FB49BC /* Supporting Files */,
@@ -177,9 +212,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5F81ED1615F1142D00D4D783 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				5F81ED0515F1142500D4D783 /* Vector3.h */,
+				5F81ED0615F1142500D4D783 /* Vector3.mm */,
+				5F81ED0715F1142500D4D783 /* Matrix3.h */,
+				5F81ED0815F1142500D4D783 /* Matrix3.mm */,
+				5F81ED0915F1142500D4D783 /* Matrix4.h */,
+				5F81ED0A15F1142500D4D783 /* Matrix4.mm */,
+				5F81ED0B15F1142500D4D783 /* Math.h */,
+				5F81ED0C15F1142500D4D783 /* Vector4.h */,
+				5F81ED0D15F1142500D4D783 /* Vector4.mm */,
+				5F81ED0E15F1142500D4D783 /* Vertex3.h */,
+				5F81ED1C15F11EE200D4D783 /* Vertex3.mm */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
 		5FBA648115684A6A00E9A4A7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				5F8ACBB915EBF67F00C1BA80 /* MyOpenGLView.mm */,
 				5F26A8BE1515190A00FB49BC /* Person.mm */,
 				5F26A8841515148D00FB49BC /* main.mm */,
 				5F26A8C6151532F400FB49BC /* StockHolding.mm */,
@@ -193,6 +247,7 @@
 		5FBA648215684A6E00E9A4A7 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				5F8ACBB815EBF67F00C1BA80 /* MyOpenGLView.h */,
 				5F26A8C5151532F400FB49BC /* StockHolding.h */,
 				5FBA648015684A6100E9A4A7 /* SCFHeader.h */,
 				5F48E9D6155080E80055EE55 /* SCFReader.h */,
@@ -248,7 +303,7 @@
 		5F26A86B1515148D00FB49BC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "DerRM Productions";
 			};
 			buildConfigurationList = 5F26A86E1515148D00FB49BC /* Build configuration list for PBXProject "Neat Little Game" */;
@@ -276,6 +331,7 @@
 			files = (
 				5F26A8831515148D00FB49BC /* InfoPlist.strings in Resources */,
 				5F26A8891515148D00FB49BC /* Credits.rtf in Resources */,
+				5F8ACBBD15EBF81700C1BA80 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,12 +366,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F81ED1815F11E9200D4D783 /* Vector3.mm in Sources */,
+				5F81ED1915F11E9700D4D783 /* Matrix3.mm in Sources */,
+				5F81ED1715F11E8F00D4D783 /* Matrix4.mm in Sources */,
+				5F81ED1A15F11E9E00D4D783 /* Vector4.mm in Sources */,
+				5F81ED1D15F11EE200D4D783 /* Vertex3.mm in Sources */,
 				5F26A8C0151530BC00FB49BC /* Person.mm in Sources */,
 				5F26A8851515148D00FB49BC /* main.mm in Sources */,
 				5F26A8C7151532F400FB49BC /* StockHolding.mm in Sources */,
 				8F2556B415162B12009FF91C /* Employee.mm in Sources */,
 				5F48E9D4155078DD0055EE55 /* SCFReader.cpp in Sources */,
 				5FBA648415684AC000E9A4A7 /* SCFHeader.cpp in Sources */,
+				5F8ACBBA15EBF67F00C1BA80 /* MyOpenGLView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +386,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F26A8A31515148E00FB49BC /* Neat_Little_GameTests.m in Sources */,
+				5F81ED1015F1142500D4D783 /* Vector3.mm in Sources */,
+				5F81ED1115F1142500D4D783 /* Matrix3.mm in Sources */,
+				5F81ED1215F1142500D4D783 /* Matrix4.mm in Sources */,
+				5F81ED1315F1142500D4D783 /* Vector4.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +481,7 @@
 		5F26A8A71515148E00FB49BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Neat Little Game/Neat Little Game-Prefix.pch";
 				INFOPLIST_FILE = "Neat Little Game/Neat Little Game-Info.plist";
@@ -426,6 +493,7 @@
 		5F26A8A81515148E00FB49BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Neat Little Game/Neat Little Game-Prefix.pch";
 				INFOPLIST_FILE = "Neat Little Game/Neat Little Game-Info.plist";
@@ -438,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Neat Little Game.app/Contents/MacOS/Neat Little Game";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Neat Little Game/Neat Little Game-Prefix.pch";
@@ -452,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Neat Little Game.app/Contents/MacOS/Neat Little Game";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Neat Little Game/Neat Little Game-Prefix.pch";
