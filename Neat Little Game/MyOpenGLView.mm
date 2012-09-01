@@ -148,14 +148,40 @@ GLsizei indexLength;
     }
     
     for (int i = 1; i <= 400; i++) {
+        if (i % 20 != 0){
+            indices.push_back(i);
+            indices.push_back(i + 20);
+            indices.push_back(i + 20 + 1);
+        } else {
+            indices.push_back(i);
+            indices.push_back(i + 20);
+            indices.push_back(i + 1);
+        }
+        
+        if (i % 20 != 0) {
+            indices.push_back(i);
+            indices.push_back(i + 20 + 1);
+            indices.push_back(i + 1);
+        } else {
+            indices.push_back(i);
+            indices.push_back(i + 1);
+            indices.push_back(i - 20 + 1);
+        }
+    }
+    
+    NSLog(@"Num Vertices: %d\n", (int)v.size());
+    
+    for (int i = 401; i < 420; i++) {
         
         indices.push_back(i);
-        indices.push_back(i + 20);
-        indices.push_back(i + 20 + 1);
-        indices.push_back(i);
-        indices.push_back(i + 20 + 1);
-        indices.push_back(i + 1);
+        indices.push_back(421);
+        if (i != 420) {
+            indices.push_back(i + 1);
+        } else {
+            indices.push_back(400);
+        }
     }
+
 }
 
 - (void)prepareOpenGL
