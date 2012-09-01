@@ -17,6 +17,7 @@
 {
     @private
     NSOpenGLContext* mOpenGLContext;
+    NSOpenGLPixelFormat* mPixelFormat;
     GLuint
     vertexShaderId,
     fragmentShaderId,
@@ -34,8 +35,10 @@
     Matrix4* mModelViewProjection;
     GLuint mMVPHandle;
     float mCurrentRotation;
+    CVDisplayLinkRef mDisplayLink;
 }
 
+- (CVReturn)getFrameForTime:(const CVTimeStamp*)outputTime;
 - (void)timerCallback:(NSTimer*)timer;
 - (id)initWithFrame:(NSRect)frameRect;
 - (NSOpenGLContext*)openGLContext;

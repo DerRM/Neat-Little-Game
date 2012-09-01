@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 {
     //SCFReader reader("Test.scf");
     //reader.test();
-    
-    return NSApplicationMain(argc, (const char **)argv);
+    @autoreleasepool {
+        return NSApplicationMain(argc, (const char **)argv);
+    }
 }

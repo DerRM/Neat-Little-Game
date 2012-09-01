@@ -74,6 +74,18 @@ const Color Colors[] = {
     return self;
 }
 
+static CVReturn OGLDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTimeStamp* now, const CVTimeStamp* outputTime, CVOptionFlags flagsIn, CVOptionFlags* flagsOut, void* displayLinkContext)
+{
+    CVReturn result = [(MyOpenGLView*)displayLinkContext getFrameForTime:outputTime];
+    return result;
+}
+
+- (CVReturn)getFrameForTime:(const CVTimeStamp*)outputTime
+{
+    [self display];
+    return kCVReturnSuccess;
+}
+
 - (void)timerCallback:(NSTimer*)timer
 {
     [self display];
@@ -81,15 +93,15 @@ const Color Colors[] = {
 
 -(void)awakeFromNib
 {
-    NSTimer* renderTimer = [NSTimer timerWithTimeInterval:0.001 target:self selector:@selector(timerCallback:) userInfo:nil repeats:YES];
-    
-    [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSEventTrackingRunLoopMode];
-    [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSModalPanelRunLoopMode];
+//    NSTimer* renderTimer = [NSTimer timerWithTimeInterval:0.001 target:self selector:@selector(timerCallback:) userInfo:nil repeats:YES];
+//    
+//    [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSEventTrackingRunLoopMode];
+//    [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSDefaultRunLoopMode];
+//    [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSModalPanelRunLoopMode];
 }
 
 std::vector<Vertex> v;
-std::vector<GLushort> indices;
+std::vector<GLubyte> indices;
 
 - (void)createSphere
 {    
@@ -140,7 +152,7 @@ std::vector<GLushort> indices;
         }
     }
     
-    for (int i = 1; i <= 200; i++) {
+    for (int i = 1; i <= 300; i++) {
         indices.push_back(i);
         indices.push_back(i + 20);
         indices.push_back(i + 20 + 1);
@@ -153,10 +165,22 @@ std::vector<GLushort> indices;
 
 - (void)prepareOpenGL
 {
-    glEnable(GL_PROGRAM_POINT_SIZE);
+    [[self openGLContext] makeCurrentContext];
+    //glEnable(GL_PROGRAM_POINT_SIZE);
     
     GLint swapInt = 1;
     [[self openGLContext] setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];
+    
+    CVDisplayLinkCreateWithActiveCGDisplays(&mDisplayLink);
+    
+    CVDisplayLinkSetOutputCallback(mDisplayLink, &OGLDisplayLinkCallback, self);
+    
+    CGLContextObj cglContext = (CGLContextObj)[[self openGLContext] CGLContextObj];
+    CGLPixelFormatObj cglPixelFormat = (CGLPixelFormatObj)[mPixelFormat CGLPixelFormatObj];
+    CVDisplayLinkSetCurrentCGDisplayFromOpenGLContext(mDisplayLink, cglContext, cglPixelFormat);
+    
+    // Activate the display link
+    CVDisplayLinkStart(mDisplayLink);
     
     mView = [Matrix4 lookAtEyeX:0.0f EyeY:0.0f EyeZ:-0.5f CenterX:0.0f CenterY:0.0f CenterZ:-5.0f UpX:0.0f UpY:1.0f UpZ:0.0f];
     mRotation = [Matrix4 rotateByYXZwithX:90.0f Y:0.0f Z:0.0f];
@@ -261,21 +285,21 @@ std::vector<GLushort> indices;
             0
         };
         
-        NSOpenGLPixelFormat* pixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:attr];
+        mPixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:attr];
         
-        if (!pixelFormat) {
+        if (!mPixelFormat) {
             NSLog(@"Unable to create windowed pixel format");
             return nil;
         }
         
-        mOpenGLContext = [[NSOpenGLContext alloc] initWithFormat:pixelFormat shareContext:nil];
+        mOpenGLContext = [[NSOpenGLContext alloc] initWithFormat:mPixelFormat shareContext:nil];
         
         if (mOpenGLContext) {
             [mOpenGLContext setView:self];
         } else {
             NSLog(@"Failed to create the OpenGL Context object.");
         }
-        [pixelFormat release];
+        //[mPixelFormat release];
     }
     return mOpenGLContext;
 }
@@ -296,15 +320,23 @@ std::vector<GLushort> indices;
 
 - (void)lockFocus
 {
-    [super lockFocus];
-
     NSOpenGLContext* context = [self openGLContext];
+ 
+    [super lockFocus];
+    if ([context view] != self) {
+        [context setView:self];
+    }
     
     [context makeCurrentContext];
 }
 
 - (void)drawRect:(NSRect)rect
-{    
+{
+    NSOpenGLContext* currentContext = [self openGLContext];
+    [currentContext makeCurrentContext];
+    
+    CGLLockContext((CGLContextObj)[currentContext CGLContextObj]);
+    
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glClearColor(0.0, 0.0, 0.0, 1.0);
     
@@ -322,9 +354,16 @@ std::vector<GLushort> indices;
 
     //glPointSize(5);
     //glDrawArrays(GL_LINE_STRIP, 0, (uint)v.size());
-    glDrawElements(GL_LINE_STRIP, (uint)indices.size(), GL_UNSIGNED_SHORT, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboId);
+    glDrawElements(GL_LINE_STRIP, (uint)indices.size(), GL_UNSIGNED_BYTE, 0);
     
-    [[self openGLContext] flushBuffer];
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
+    
+    [currentContext flushBuffer];
+    
+    CGLUnlockContext((CGLContextObj)[currentContext CGLContextObj]);
 }
 
 - (void)destroyShaders
@@ -377,6 +416,7 @@ std::vector<GLushort> indices;
     [self destroyVBO];
     
     [mOpenGLContext release];
+    CVDisplayLinkRelease(mDisplayLink);
     [super dealloc];
 }
 
