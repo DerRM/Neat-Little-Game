@@ -60,8 +60,6 @@ const Color Colors[] = {
     {1.0f, 1.0f, 1.0f, 1.0f},
 };
 
-Vertex* vertices2;
-
 @implementation MyOpenGLView
 
 - (id)initWithFrame:(NSRect)frameRect
@@ -90,46 +88,67 @@ Vertex* vertices2;
     [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSModalPanelRunLoopMode];
 }
 
+std::vector<Vertex> v;
+std::vector<GLushort> indices;
+
 - (void)createSphere
-{
-    vertices2 = (Vertex*) malloc(sizeof(Vertex) * (400 + 2));
-    
+{    
     GLfloat theta;
     GLfloat phi;
     
     GLfloat rx = 1., ry = 1., rz = 1.;
+        
+    Vertex vex;
+    vex.position[0] = 0;
+    vex.position[1] = 0;
+    vex.position[2] = rz * 1;
+    vex.position[3] = 1.0f;
+    v.push_back(vex);
     
-    int index = 0;
-    
-    vertices2[index].position[0] = 0;
-    vertices2[index].position[1] = 0;
-    vertices2[index].position[2] = rz * 1;
-    vertices2[index].position[3] = 1.0f;
-    
-    index++;
-    
-    for (int i = 0 ; i < 20; i++)
+    for (int i = 0 ; i <= 20; i++)
     {
-        phi += M_PI / 20;
+        phi += M_PI / 22;
         
         for (int j = 0; j < 20; j++)
         {
-            theta += (2 * M_PI) / 22;
+            theta += (2 * M_PI) / 20;
+            Vertex vex1;
             
-            vertices2[index].position[0] = rx * cosf(theta) * sinf(phi);
-            vertices2[index].position[1] = ry * sinf(theta) * sinf(phi);
-            vertices2[index].position[2] = rz * cosf(phi);
-            vertices2[index].position[3] = 1.0f;
-            
-            index++;
-            //printf("%f\n", vertices2[i].position[0]);
+            vex1.position[0] = rx * cosf(theta) * sinf(phi);
+            vex1.position[1] = ry * sinf(theta) * sinf(phi);
+            vex1.position[2] = rz * cosf(phi);
+            vex1.position[3] = 1.0f;
+            v.push_back(vex1);
         }
     }
     
-    vertices2[index].position[0] = 0;
-    vertices2[index].position[1] = 0;
-    vertices2[index].position[2] = rz * -1;
-    vertices2[index].position[3] = 1.0f;
+    Vertex vex2;
+    vex2.position[0] = 0;
+    vex2.position[1] = 0;
+    vex2.position[2] = rz * -1;
+    vex2.position[3] = 1.0f;
+    v.push_back(vex2);
+    
+    for (int i = 0; i < 20; i++) {
+        
+        indices.push_back(0);
+        indices.push_back(i + 1);
+        if (i != 19) {
+            indices.push_back(i + 2);
+        } else {
+            indices.push_back(1);
+        }
+    }
+    
+    for (int i = 1; i <= 200; i++) {
+        indices.push_back(i);
+        indices.push_back(i + 20);
+        indices.push_back(i + 20 + 1);
+    
+        indices.push_back(i);
+        indices.push_back(i + 20 + 1);
+        indices.push_back(i + 1);
+    }
 }
 
 - (void)prepareOpenGL
@@ -202,7 +221,10 @@ Vertex* vertices2;
     
     glGenBuffers(1, &vboId);
     glBindBuffer(GL_ARRAY_BUFFER, vboId);
-    glBufferData(GL_ARRAY_BUFFER, (400 + 2) * 4 * 4, vertices2, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, v.size() * sizeof(Vertex), &v[0], GL_STATIC_DRAW);
+    glGenBuffers(1, &iboId);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboId);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), &indices[0], GL_STATIC_DRAW);
     vecLoc = glGetAttribLocation(programId, "in_Position");
     glVertexAttribPointer(vecLoc, 4, GL_FLOAT, GL_FALSE, 0, 0);
     glEnableVertexAttribArray(vecLoc);
@@ -299,7 +321,8 @@ Vertex* vertices2;
     glUniformMatrix4fv(mMVPHandle, 1, GL_FALSE, mModelViewProjection.array);
 
     //glPointSize(5);
-    glDrawArrays(GL_LINE_STRIP, 0, 400 + 2);
+    //glDrawArrays(GL_LINE_STRIP, 0, (uint)v.size());
+    glDrawElements(GL_LINE_STRIP, (uint)indices.size(), GL_UNSIGNED_SHORT, 0);
     
     [[self openGLContext] flushBuffer];
 }

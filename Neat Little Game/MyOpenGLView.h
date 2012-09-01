@@ -10,6 +10,7 @@
 #import <OpenGL/glu.h>
 #undef __gl_h_ //stupid hack to get rid of gl3.h warning
 #import <OpenGL/gl3.h>
+#include <vector>
 #import "Math.h"
 
 @interface MyOpenGLView : NSView
@@ -22,6 +23,7 @@
     programId,
     vaoId,
     vboId,
+    iboId,
     colorBufferId,
     vecLoc,
     colLoc;
