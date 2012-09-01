@@ -40,6 +40,7 @@ const GLchar* fragmentShader =
 
 typedef struct {
     GLfloat position[4];
+    //GLfloat normal[3];
 } Vertex;
 
 typedef struct {
@@ -103,7 +104,7 @@ GLsizei indexLength;
     GLfloat theta;
     GLfloat phi;
     
-    GLfloat rx = 1., ry = 1., rz = 1.;
+    GLfloat rx = 1., ry = 1., rz = 1.3;
         
     Vertex vex;
     vex.position[0] = 0;
@@ -171,7 +172,7 @@ GLsizei indexLength;
     
     NSLog(@"Num Vertices: %d\n", (int)v.size());
     
-    for (int i = 401; i < 420; i++) {
+    for (int i = 400; i < 420; i++) {
         
         indices.push_back(i);
         indices.push_back(421);
@@ -189,6 +190,7 @@ GLsizei indexLength;
     NSLog(@"prepare OpenGL");
     [[self openGLContext] makeCurrentContext];
     glEnable(GL_PROGRAM_POINT_SIZE);
+    glEnable(GL_CULL_FACE);
     
     GLint swapInt = 1;
     [[self openGLContext] setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];
@@ -270,7 +272,7 @@ GLsizei indexLength;
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboId);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(GLushort), &indices[0], GL_STATIC_DRAW);
     vecLoc = glGetAttribLocation(programId, "in_Position");
-    glVertexAttribPointer(vecLoc, 4, GL_FLOAT, GL_FALSE, 0, 0);
+    glVertexAttribPointer(vecLoc, 4, GL_FLOAT, GL_FALSE, 4 * 4, 0);
     glEnableVertexAttribArray(vecLoc);
 
     colLoc = glGetUniformLocation(programId, "in_Color");
@@ -358,7 +360,7 @@ GLsizei indexLength;
 
     mRotation = [Matrix4 rotateByYXZwithX:-90.0f Y:mCurrentRotation Z:0.0f];
     mModel = [[Matrix4 alloc] initAsIdentity];
-    mModel = [Matrix4 translationMatrix:mModel WithX:0.0f Y:0.0f Z:-2.0f];
+    mModel = [Matrix4 translationMatrix:mModel WithX:0.0f Y:0.0f Z:-3.0f];
     
     mModel = [Matrix4 multiply:mModel With:mRotation];
     mModelViewProjection = [Matrix4 multiply:mView With:mModel];
