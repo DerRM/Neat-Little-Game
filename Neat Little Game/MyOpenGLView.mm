@@ -68,6 +68,9 @@ const Color Colors[] = {
     
     if (self != nil) {
         
+        [self createSphere];
+        
+        NSLog(@"init with frame");
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mSurfaceNeedsUpdate:) name:NSViewGlobalFrameDidChangeNotification object:self];
     }
         
@@ -91,18 +94,10 @@ static CVReturn OGLDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTim
     [self display];
 }
 
--(void)awakeFromNib
-{
-//    NSTimer* renderTimer = [NSTimer timerWithTimeInterval:0.001 target:self selector:@selector(timerCallback:) userInfo:nil repeats:YES];
-//    
-//    [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSEventTrackingRunLoopMode];
-//    [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSDefaultRunLoopMode];
-//    [[NSRunLoop currentRunLoop] addTimer:renderTimer forMode:NSModalPanelRunLoopMode];
-}
-
 std::vector<Vertex> v;
-std::vector<GLubyte> indices;
-
+std::vector<GLushort> indices;
+GLushort* indices2;
+GLsizei indexLength;
 - (void)createSphere
 {    
     GLfloat theta;
@@ -152,11 +147,11 @@ std::vector<GLubyte> indices;
         }
     }
     
-    for (int i = 1; i <= 300; i++) {
+    for (int i = 1; i <= 400; i++) {
+        
         indices.push_back(i);
         indices.push_back(i + 20);
         indices.push_back(i + 20 + 1);
-    
         indices.push_back(i);
         indices.push_back(i + 20 + 1);
         indices.push_back(i + 1);
@@ -165,8 +160,9 @@ std::vector<GLubyte> indices;
 
 - (void)prepareOpenGL
 {
+    NSLog(@"prepare OpenGL");
     [[self openGLContext] makeCurrentContext];
-    //glEnable(GL_PROGRAM_POINT_SIZE);
+    glEnable(GL_PROGRAM_POINT_SIZE);
     
     GLint swapInt = 1;
     [[self openGLContext] setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];
@@ -186,9 +182,7 @@ std::vector<GLubyte> indices;
     mRotation = [Matrix4 rotateByYXZwithX:90.0f Y:0.0f Z:0.0f];
     mModel = [[Matrix4 alloc] initAsIdentity];
     mModel = [Matrix4 translationMatrix:mModel WithX:0.0f Y:0.0f Z:-1.0f];
-   
-    [self createSphere];
-    
+       
     [self createShaders];
     [self createVBO];
 }
@@ -310,13 +304,7 @@ std::vector<GLubyte> indices;
     glViewport(0, 0, (GLsizei)frame.size.width, (GLsizei)frame.size.height);
     float ratio = self.frame.size.width / self.frame.size.height;
     mProjection = [Matrix4 frustumWithLeft:-ratio Right:ratio Top:1.0f Bottom:-1.0f Near:1.0f Far:1000.0f];
-
 }
-
-//- (BOOL)isOpaque
-//{
-//    return YES;
-//}
 
 - (void)lockFocus
 {
@@ -352,10 +340,9 @@ std::vector<GLubyte> indices;
     
     glUniformMatrix4fv(mMVPHandle, 1, GL_FALSE, mModelViewProjection.array);
 
-    //glPointSize(5);
-    //glDrawArrays(GL_LINE_STRIP, 0, (uint)v.size());
+    //glDrawArrays(GL_POINTS, 0, (uint)v.size());
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboId);
-    glDrawElements(GL_LINE_STRIP, (uint)indices.size(), GL_UNSIGNED_BYTE, 0);
+    glDrawElements(GL_LINE_STRIP, (GLsizei)indices.size(), GL_UNSIGNED_SHORT, 0);
     
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);

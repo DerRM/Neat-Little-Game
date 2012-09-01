@@ -39,7 +39,7 @@
 }
 
 - (CVReturn)getFrameForTime:(const CVTimeStamp*)outputTime;
-- (void)timerCallback:(NSTimer*)timer;
+//- (void)timerCallback:(NSTimer*)timer;
 - (id)initWithFrame:(NSRect)frameRect;
 - (NSOpenGLContext*)openGLContext;
 - (void)prepareOpenGL;
