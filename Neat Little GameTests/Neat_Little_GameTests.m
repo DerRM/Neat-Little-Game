@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in Neat Little GameTests");
+    XCTFail(@"Unit tests are not implemented yet in Neat Little GameTests");
 }
 
 @end

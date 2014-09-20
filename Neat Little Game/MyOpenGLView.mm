@@ -47,19 +47,19 @@ typedef struct {
     GLfloat color[4];  
 } Color;;
 
-const Vertex Vertices[] = {
-    {-0.8f,  0.8f, 0.0f, 1.0f},
-    { 0.8f,  0.8f, 0.0f, 1.0f},
-    {-0.8f, -0.8f, 0.0f, 1.0f},
-    { 0.8f, -0.8f, 0.0f, 1.0f}
-};
-
-const Color Colors[] = {
-    {1.0f, 0.0f, 0.0f, 1.0f},
-    {0.0f, 1.0f, 0.0f, 1.0f},
-    {0.0f, 0.0f, 1.0f, 1.0f},
-    {1.0f, 1.0f, 1.0f, 1.0f},
-};
+//const Vertex Vertices[] = {
+//    {-0.8f,  0.8f, 0.0f, 1.0f},
+//    { 0.8f,  0.8f, 0.0f, 1.0f},
+//    {-0.8f, -0.8f, 0.0f, 1.0f},
+//    { 0.8f, -0.8f, 0.0f, 1.0f}
+//};
+//
+//const Color Colors[] = {
+//    {1.0f, 0.0f, 0.0f, 1.0f},
+//    {0.0f, 1.0f, 0.0f, 1.0f},
+//    {0.0f, 0.0f, 1.0f, 1.0f},
+//    {1.0f, 1.0f, 1.0f, 1.0f},
+//};
 
 @implementation MyOpenGLView
 
@@ -101,8 +101,8 @@ GLushort* indices2;
 GLsizei indexLength;
 - (void)createSphere
 {    
-    GLfloat theta;
-    GLfloat phi;
+    GLfloat theta = 0.0f;
+    GLfloat phi = 0.0f;
     
     GLfloat rx = 1., ry = 1., rz = 1.3;
         

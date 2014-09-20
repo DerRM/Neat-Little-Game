@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Smart Mobile Factory. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface Neat_Little_GameTests : SenTestCase
+@interface Neat_Little_GameTests : XCTestCase
 
 @end
