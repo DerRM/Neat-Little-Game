@@ -29,10 +29,10 @@
 		5F81ED1A15F11E9E00D4D783 /* Vector4.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED0D15F1142500D4D783 /* Vector4.mm */; };
 		5F81ED1D15F11EE200D4D783 /* Vertex3.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F81ED1C15F11EE200D4D783 /* Vertex3.mm */; };
 		5F8ACBBA15EBF67F00C1BA80 /* MyOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F8ACBB915EBF67F00C1BA80 /* MyOpenGLView.mm */; };
-		5F8ACBBD15EBF81700C1BA80 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F8ACBBC15EBF81700C1BA80 /* MainMenu.xib */; };
 		5FBA647F156847FD00E9A4A7 /* Test.scf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F48E9D7155081720055EE55 /* Test.scf */; };
 		5FBA648415684AC000E9A4A7 /* SCFHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FBA648315684AC000E9A4A7 /* SCFHeader.cpp */; };
 		8F2556B415162B12009FF91C /* Employee.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8F2556B315162B12009FF91C /* Employee.mm */; };
+		8FA4697F19D74DFF007B206B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA4697E19D74DFF007B206B /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,7 @@
 		5F26A8841515148D00FB49BC /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5F26A8861515148D00FB49BC /* Neat Little Game-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neat Little Game-Prefix.pch"; sourceTree = "<group>"; };
 		5F26A8881515148D00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		5F26A8951515148E00FB49BC /* Neat Little GameTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Neat Little GameTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F26A8951515148E00FB49BC /* Neat Little GameTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Neat Little GameTests.octest"; path = "Neat Little GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F26A89D1515148E00FB49BC /* Neat Little GameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Neat Little GameTests-Info.plist"; sourceTree = "<group>"; };
 		5F26A89F1515148E00FB49BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F26A8A11515148E00FB49BC /* Neat_Little_GameTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Neat_Little_GameTests.h; sourceTree = "<group>"; };
@@ -96,11 +96,11 @@
 		5F81ED1C15F11EE200D4D783 /* Vertex3.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Vertex3.mm; sourceTree = "<group>"; };
 		5F8ACBB815EBF67F00C1BA80 /* MyOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenGLView.h; sourceTree = "<group>"; };
 		5F8ACBB915EBF67F00C1BA80 /* MyOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyOpenGLView.mm; sourceTree = "<group>"; };
-		5F8ACBBC15EBF81700C1BA80 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		5FBA648015684A6100E9A4A7 /* SCFHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCFHeader.h; sourceTree = "<group>"; };
 		5FBA648315684AC000E9A4A7 /* SCFHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SCFHeader.cpp; sourceTree = "<group>"; };
 		8F2556B215162B12009FF91C /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		8F2556B315162B12009FF91C /* Employee.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Employee.mm; sourceTree = "<group>"; };
+		8FA4697E19D74DFF007B206B /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +128,8 @@
 		5F26A8691515148D00FB49BC = {
 			isa = PBXGroup;
 			children = (
+				8FA4697E19D74DFF007B206B /* MainMenu.xib */,
 				5F77E0F315F12EBF00CAC467 /* CoreVideo.framework */,
-				5F8ACBBC15EBF81700C1BA80 /* MainMenu.xib */,
 				5F48E9D7155081720055EE55 /* Test.scf */,
 				5F26A87E1515148D00FB49BC /* Neat Little Game */,
 				5F26A89B1515148E00FB49BC /* Neat Little GameTests */,
@@ -328,7 +328,7 @@
 			files = (
 				5F26A8831515148D00FB49BC /* InfoPlist.strings in Resources */,
 				5F26A8891515148D00FB49BC /* Credits.rtf in Resources */,
-				5F8ACBBD15EBF81700C1BA80 /* MainMenu.xib in Resources */,
+				8FA4697F19D74DFF007B206B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
